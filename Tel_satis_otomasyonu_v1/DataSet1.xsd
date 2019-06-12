@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TelsatDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TelsatDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Tel_satis_otomasyonu_v1.Properties.Settings.GlobalReference.Default.TelsatDBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="urunvefaturaTableAdapter" GeneratorDataComponentClassName="urunvefaturaTableAdapter" Name="urunvefatura" UserDataComponentName="urunvefaturaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TelsatDBConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        urunTL.urunfiyatID, urunTL.telorguTL, urunTL.betondirekTL, urunTL.payandadirekTL, urunTL.gerdirmetelTL, urunTL.dikenlitelTL, urunTL.betontasTL, urunTL.iscilikTL, urunTL.baglamatelTL, fatura.faturaID, fatura.faturaTarih, 
+                         fatura.faturaTutari, fatura.urun_id
+FROM            urunTL INNER JOIN
+                         fatura ON urunTL.urunfiyatID = fatura.urun_id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="urunfiyatID" DataSetColumn="urunfiyatID" />
+              <Mapping SourceColumn="telorguTL" DataSetColumn="telorguTL" />
+              <Mapping SourceColumn="betondirekTL" DataSetColumn="betondirekTL" />
+              <Mapping SourceColumn="payandadirekTL" DataSetColumn="payandadirekTL" />
+              <Mapping SourceColumn="gerdirmetelTL" DataSetColumn="gerdirmetelTL" />
+              <Mapping SourceColumn="dikenlitelTL" DataSetColumn="dikenlitelTL" />
+              <Mapping SourceColumn="betontasTL" DataSetColumn="betontasTL" />
+              <Mapping SourceColumn="iscilikTL" DataSetColumn="iscilikTL" />
+              <Mapping SourceColumn="baglamatelTL" DataSetColumn="baglamatelTL" />
+              <Mapping SourceColumn="faturaID" DataSetColumn="faturaID" />
+              <Mapping SourceColumn="faturaTarih" DataSetColumn="faturaTarih" />
+              <Mapping SourceColumn="faturaTutari" DataSetColumn="faturaTutari" />
+              <Mapping SourceColumn="urun_id" DataSetColumn="urun_id" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="urunvefatura" msprop:Generator_TableClassName="urunvefaturaDataTable" msprop:Generator_TableVarName="tableurunvefatura" msprop:Generator_TablePropName="urunvefatura" msprop:Generator_RowDeletingName="urunvefaturaRowDeleting" msprop:Generator_RowChangingName="urunvefaturaRowChanging" msprop:Generator_RowEvHandlerName="urunvefaturaRowChangeEventHandler" msprop:Generator_RowDeletedName="urunvefaturaRowDeleted" msprop:Generator_UserTableName="urunvefatura" msprop:Generator_RowChangedName="urunvefaturaRowChanged" msprop:Generator_RowEvArgName="urunvefaturaRowChangeEvent" msprop:Generator_RowClassName="urunvefaturaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="urunfiyatID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnurunfiyatID" msprop:Generator_ColumnPropNameInRow="urunfiyatID" msprop:Generator_ColumnPropNameInTable="urunfiyatIDColumn" msprop:Generator_UserColumnName="urunfiyatID" type="xs:int" />
+              <xs:element name="telorguTL" msprop:Generator_ColumnVarNameInTable="columntelorguTL" msprop:Generator_ColumnPropNameInRow="telorguTL" msprop:Generator_ColumnPropNameInTable="telorguTLColumn" msprop:Generator_UserColumnName="telorguTL" type="xs:int" minOccurs="0" />
+              <xs:element name="betondirekTL" msprop:Generator_ColumnVarNameInTable="columnbetondirekTL" msprop:Generator_ColumnPropNameInRow="betondirekTL" msprop:Generator_ColumnPropNameInTable="betondirekTLColumn" msprop:Generator_UserColumnName="betondirekTL" type="xs:int" minOccurs="0" />
+              <xs:element name="payandadirekTL" msprop:Generator_ColumnVarNameInTable="columnpayandadirekTL" msprop:Generator_ColumnPropNameInRow="payandadirekTL" msprop:Generator_ColumnPropNameInTable="payandadirekTLColumn" msprop:Generator_UserColumnName="payandadirekTL" type="xs:int" minOccurs="0" />
+              <xs:element name="gerdirmetelTL" msprop:Generator_ColumnVarNameInTable="columngerdirmetelTL" msprop:Generator_ColumnPropNameInRow="gerdirmetelTL" msprop:Generator_ColumnPropNameInTable="gerdirmetelTLColumn" msprop:Generator_UserColumnName="gerdirmetelTL" type="xs:int" minOccurs="0" />
+              <xs:element name="dikenlitelTL" msprop:Generator_ColumnVarNameInTable="columndikenlitelTL" msprop:Generator_ColumnPropNameInRow="dikenlitelTL" msprop:Generator_ColumnPropNameInTable="dikenlitelTLColumn" msprop:Generator_UserColumnName="dikenlitelTL" type="xs:int" minOccurs="0" />
+              <xs:element name="betontasTL" msprop:Generator_ColumnVarNameInTable="columnbetontasTL" msprop:Generator_ColumnPropNameInRow="betontasTL" msprop:Generator_ColumnPropNameInTable="betontasTLColumn" msprop:Generator_UserColumnName="betontasTL" type="xs:int" minOccurs="0" />
+              <xs:element name="iscilikTL" msprop:Generator_ColumnVarNameInTable="columniscilikTL" msprop:Generator_ColumnPropNameInRow="iscilikTL" msprop:Generator_ColumnPropNameInTable="iscilikTLColumn" msprop:Generator_UserColumnName="iscilikTL" type="xs:int" minOccurs="0" />
+              <xs:element name="baglamatelTL" msprop:Generator_ColumnVarNameInTable="columnbaglamatelTL" msprop:Generator_ColumnPropNameInRow="baglamatelTL" msprop:Generator_ColumnPropNameInTable="baglamatelTLColumn" msprop:Generator_UserColumnName="baglamatelTL" type="xs:int" minOccurs="0" />
+              <xs:element name="faturaID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnfaturaID" msprop:Generator_ColumnPropNameInRow="faturaID" msprop:Generator_ColumnPropNameInTable="faturaIDColumn" msprop:Generator_UserColumnName="faturaID" type="xs:int" />
+              <xs:element name="faturaTarih" msprop:Generator_ColumnVarNameInTable="columnfaturaTarih" msprop:Generator_ColumnPropNameInRow="faturaTarih" msprop:Generator_ColumnPropNameInTable="faturaTarihColumn" msprop:Generator_UserColumnName="faturaTarih" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="faturaTutari" msprop:Generator_ColumnVarNameInTable="columnfaturaTutari" msprop:Generator_ColumnPropNameInRow="faturaTutari" msprop:Generator_ColumnPropNameInTable="faturaTutariColumn" msprop:Generator_UserColumnName="faturaTutari" type="xs:int" minOccurs="0" />
+              <xs:element name="urun_id" msprop:Generator_ColumnVarNameInTable="columnurun_id" msprop:Generator_ColumnPropNameInRow="urun_id" msprop:Generator_ColumnPropNameInTable="urun_idColumn" msprop:Generator_UserColumnName="urun_id" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:urunvefatura" />
+      <xs:field xpath="mstns:urunfiyatID" />
+      <xs:field xpath="mstns:faturaID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

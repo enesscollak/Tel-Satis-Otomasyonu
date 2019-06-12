@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="tel_satis_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ajanda">
+    <Key>
+      <PropertyRef Name="is_id" />
+    </Key>
+    <Property Name="is_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="is_baslama_tarih" Type="DateTime" Precision="0" />
+    <Property Name="is_suresi" Type="Int32" />
+    <Property Name="m_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="fatura" BaseType="tel_satis_dbModel.musteri">
+    <Property Name="f_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="f_toplam_tutar" Type="Int32" />
+    <Property Name="f_tarih" Type="DateTime" Precision="0" />
+    <Property Name="u_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="kategori" BaseType="tel_satis_dbModel.urun">
+    <Property Name="k_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="k_ad" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="kullanici">
+    <Key>
+      <PropertyRef Name="k_id" />
+    </Key>
+    <Property Name="k_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="k_adi" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="k_sifre" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="musteri" BaseType="tel_satis_dbModel.ajanda">
+    <Property Name="m_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="m_adsoy" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="m_tel" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="m_adres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="m_notu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="m_mail" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="f_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="urun" BaseType="tel_satis_dbModel.fatura">
+    <Property Name="u_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="u_kategori" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="u_adi" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="u_ozellik" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="u_miktar" Type="Int32" />
+    <Property Name="u_fiyat" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="u_iscilik" Type="Int32" />
+    <Property Name="u_toplam_fiyat" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="u_stok" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="tel_satis_dbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ajanda" EntityType="Self.ajanda" />
+    <EntitySet Name="kullanici" EntityType="Self.kullanici" />
+  </EntityContainer>
+</Schema>

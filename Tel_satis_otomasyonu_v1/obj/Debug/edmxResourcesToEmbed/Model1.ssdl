@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="tel_satis_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ajanda">
+    <Key>
+      <PropertyRef Name="is_id" />
+    </Key>
+    <Property Name="is_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="is_baslama_tarih" Type="date" />
+    <Property Name="is_suresi" Type="int" />
+    <Property Name="m_id" Type="int" />
+  </EntityType>
+  <EntityType Name="fatura">
+    <Key>
+      <PropertyRef Name="f_id" />
+    </Key>
+    <Property Name="f_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="f_toplam_tutar" Type="int" />
+    <Property Name="f_tarih" Type="date" />
+    <Property Name="u_id" Type="int" />
+  </EntityType>
+  <EntityType Name="kategori">
+    <Key>
+      <PropertyRef Name="k_id" />
+    </Key>
+    <Property Name="k_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="k_ad" Type="nvarchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="kullanici">
+    <Key>
+      <PropertyRef Name="k_id" />
+    </Key>
+    <Property Name="k_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="k_adi" Type="nchar" MaxLength="10" />
+    <Property Name="k_sifre" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="musteri">
+    <Key>
+      <PropertyRef Name="m_id" />
+    </Key>
+    <Property Name="m_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="m_adsoy" Type="nchar" MaxLength="20" />
+    <Property Name="m_tel" Type="nvarchar" MaxLength="11" />
+    <Property Name="m_adres" Type="nvarchar" MaxLength="50" />
+    <Property Name="m_notu" Type="nvarchar" MaxLength="50" />
+    <Property Name="m_mail" Type="nvarchar" MaxLength="25" />
+    <Property Name="f_id" Type="int" />
+  </EntityType>
+  <EntityType Name="urun">
+    <Key>
+      <PropertyRef Name="u_id" />
+    </Key>
+    <Property Name="u_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="u_kategori" Type="nvarchar" MaxLength="15" />
+    <Property Name="u_adi" Type="nvarchar" MaxLength="20" />
+    <Property Name="u_ozellik" Type="nvarchar" MaxLength="25" />
+    <Property Name="u_miktar" Type="int" />
+    <Property Name="u_fiyat" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="u_iscilik" Type="int" />
+    <Property Name="u_toplam_fiyat" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="u_stok" Type="int" />
+  </EntityType>
+  <EntityContainer Name="tel_satis_dbModelStoreContainer">
+    <EntitySet Name="ajanda" EntityType="Self.ajanda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="fatura" EntityType="Self.fatura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="kategori" EntityType="Self.kategori" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="kullanici" EntityType="Self.kullanici" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="musteri" EntityType="Self.musteri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="urun" EntityType="Self.urun" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

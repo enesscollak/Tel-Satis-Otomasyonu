@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="tel_satis_otodbModelStoreContainer" CdmEntityContainer="tel_satis_otodbEntities">
+    <EntitySetMapping Name="ajanda">
+      <EntityTypeMapping TypeName="tel_satis_otodbModel.ajanda">
+        <MappingFragment StoreEntitySet="ajanda">
+          <ScalarProperty Name="is_id" ColumnName="is_id" />
+          <ScalarProperty Name="isbasitarihi" ColumnName="isbasitarihi" />
+          <ScalarProperty Name="is_süresi" ColumnName="is_süresi" />
+          <ScalarProperty Name="is_adresi" ColumnName="is_adresi" />
+          <ScalarProperty Name="is_not" ColumnName="is_not" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fatura">
+      <EntityTypeMapping TypeName="tel_satis_otodbModel.fatura">
+        <MappingFragment StoreEntitySet="fatura">
+          <ScalarProperty Name="f_id" ColumnName="f_id" />
+          <ScalarProperty Name="toplam_fiyat" ColumnName="toplam_fiyat" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kullanicilar">
+      <EntityTypeMapping TypeName="tel_satis_otodbModel.kullanicilar">
+        <MappingFragment StoreEntitySet="kullanicilar">
+          <ScalarProperty Name="kullanici_id" ColumnName="kullanici_id" />
+          <ScalarProperty Name="kullanici_adi" ColumnName="kullanici_adi" />
+          <ScalarProperty Name="kullanici_sifre" ColumnName="kullanici_sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="musteri">
+      <EntityTypeMapping TypeName="tel_satis_otodbModel.musteri">
+        <MappingFragment StoreEntitySet="musteri">
+          <ScalarProperty Name="musteri_id" ColumnName="musteri_id" />
+          <ScalarProperty Name="adsoy" ColumnName="adsoy" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="adres" ColumnName="adres" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="f_id" ColumnName="f_id" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="urun_fiyat">
+      <EntityTypeMapping TypeName="tel_satis_otodbModel.urun_fiyat">
+        <MappingFragment StoreEntitySet="urun_fiyat">
+          <ScalarProperty Name="urunler_fiyat_id" ColumnName="urunler_fiyat_id" />
+          <ScalarProperty Name="kafes_tel_orgu" ColumnName="kafes_tel_orgu" />
+          <ScalarProperty Name="beton_direk" ColumnName="beton_direk" />
+          <ScalarProperty Name="payanda_direk" ColumnName="payanda_direk" />
+          <ScalarProperty Name="gerdirme_tel" ColumnName="gerdirme_tel" />
+          <ScalarProperty Name="dikenli_tel" ColumnName="dikenli_tel" />
+          <ScalarProperty Name="beton_tas" ColumnName="beton_tas" />
+          <ScalarProperty Name="baglama_teli" ColumnName="baglama_teli" />
+          <ScalarProperty Name="iscilik" ColumnName="iscilik" />
+          <ScalarProperty Name="toplam_fiyat" ColumnName="toplam_fiyat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="urun_miktar">
+      <EntityTypeMapping TypeName="tel_satis_otodbModel.urun_miktar">
+        <MappingFragment StoreEntitySet="urun_miktar">
+          <ScalarProperty Name="urunler_miktar_id" ColumnName="urunler_miktar_id" />
+          <ScalarProperty Name="kafes_tel_orgu_M" ColumnName="kafes_tel_orgu_M" />
+          <ScalarProperty Name="beton_direk_A" ColumnName="beton_direk_A" />
+          <ScalarProperty Name="payanda_direk_A" ColumnName="payanda_direk_A" />
+          <ScalarProperty Name="gerdirme_tel_M" ColumnName="gerdirme_tel_M" />
+          <ScalarProperty Name="dikenli_tel_M" ColumnName="dikenli_tel_M" />
+          <ScalarProperty Name="beton_tas_M3" ColumnName="beton_tas_M3" />
+          <ScalarProperty Name="baglama_teli_M" ColumnName="baglama_teli_M" />
+          <ScalarProperty Name="iscilik_M" ColumnName="iscilik_M" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

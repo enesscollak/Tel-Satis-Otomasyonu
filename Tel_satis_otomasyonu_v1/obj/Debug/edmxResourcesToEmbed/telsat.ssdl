@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="tel_satis_otodbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ajanda">
+    <Key>
+      <PropertyRef Name="is_id" />
+    </Key>
+    <Property Name="is_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="isbasitarihi" Type="nvarchar" MaxLength="10" />
+    <Property Name="is_süresi" Type="int" />
+    <Property Name="is_adresi" Type="nvarchar" MaxLength="50" />
+    <Property Name="is_not" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="fatura">
+    <Key>
+      <PropertyRef Name="f_id" />
+    </Key>
+    <Property Name="f_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="toplam_fiyat" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="tarih" Type="date" />
+  </EntityType>
+  <EntityType Name="kullanicilar">
+    <Key>
+      <PropertyRef Name="kullanici_id" />
+    </Key>
+    <Property Name="kullanici_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kullanici_adi" Type="nvarchar" MaxLength="15" />
+    <Property Name="kullanici_sifre" Type="nvarchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="musteri">
+    <Key>
+      <PropertyRef Name="musteri_id" />
+    </Key>
+    <Property Name="musteri_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="adsoy" Type="nvarchar" MaxLength="25" />
+    <Property Name="telefon" Type="nvarchar" MaxLength="25" />
+    <Property Name="adres" Type="nvarchar" MaxLength="50" />
+    <Property Name="mail" Type="nvarchar" MaxLength="25" />
+    <Property Name="f_id" Type="int" />
+    <Property Name="tarih" Type="date" />
+  </EntityType>
+  <EntityType Name="urun_fiyat">
+    <Key>
+      <PropertyRef Name="urunler_fiyat_id" />
+    </Key>
+    <Property Name="urunler_fiyat_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kafes_tel_orgu" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="beton_direk" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="payanda_direk" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="gerdirme_tel" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="dikenli_tel" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="beton_tas" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="baglama_teli" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="iscilik" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="toplam_fiyat" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="urun_miktar">
+    <Key>
+      <PropertyRef Name="urunler_miktar_id" />
+    </Key>
+    <Property Name="urunler_miktar_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kafes_tel_orgu_M" Type="int" />
+    <Property Name="beton_direk_A" Type="int" />
+    <Property Name="payanda_direk_A" Type="int" />
+    <Property Name="gerdirme_tel_M" Type="int" />
+    <Property Name="dikenli_tel_M" Type="int" />
+    <Property Name="beton_tas_M3" Type="int" />
+    <Property Name="baglama_teli_M" Type="int" />
+    <Property Name="iscilik_M" Type="int" />
+  </EntityType>
+  <EntityContainer Name="tel_satis_otodbModelStoreContainer">
+    <EntitySet Name="ajanda" EntityType="Self.ajanda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="fatura" EntityType="Self.fatura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="kullanicilar" EntityType="Self.kullanicilar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="musteri" EntityType="Self.musteri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="urun_fiyat" EntityType="Self.urun_fiyat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="urun_miktar" EntityType="Self.urun_miktar" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,2110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSet1">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>10dbb423-8942-464c-94a1-bf2a6c2048f5</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>DataSet1</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="urunfiyatID">
+          <DataField>urunfiyatID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="telorguTL">
+          <DataField>telorguTL</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="betondirekTL">
+          <DataField>betondirekTL</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="payandadirekTL">
+          <DataField>payandadirekTL</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="gerdirmetelTL">
+          <DataField>gerdirmetelTL</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="dikenlitelTL">
+          <DataField>dikenlitelTL</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="betontasTL">
+          <DataField>betontasTL</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="baglamatelTL">
+          <DataField>baglamatelTL</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="iscilikTL">
+          <DataField>iscilikTL</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="faturaID">
+          <DataField>faturaID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="faturaTarih">
+          <DataField>faturaTarih</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="faturaTutari">
+          <DataField>faturaTutari</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="urun_id">
+          <DataField>urun_id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DataSet1</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\enes\Desktop\19 Ekim Son Üç Adımdan Önceki Hali\Tel_satis_otomasyonu_v1\DataSet1.xsd</rd:SchemaPath>
+        <rd:TableName>urunvefatura</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>urunvefaturaTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Tablix Name="Tablix1">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>3.88898cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>3.86901cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>3.5702cm</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.6cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Fatura ID</Value>
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox2</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>Red</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox3">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Fatura Tarihi</Value>
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox3</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>Red</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox5">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Fatura Tutarı</Value>
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox5</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>Red</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.6cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="faturaID">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Last(Fields!faturaID.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>faturaID</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>Red</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="faturaTarih">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Last(Fields!faturaTarih.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <Format>d</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>faturaTarih</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>Red</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="faturaTutari">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Last(Fields!faturaTutari.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <Format>0.00;(0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>faturaTutari</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>Red</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <rd:FormatSymbolCulture>tr-TR</rd:FormatSymbolCulture>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>DataSet1</DataSetName>
+            <Top>6.45583cm</Top>
+            <Left>7.01366cm</Left>
+            <Height>1.2cm</Height>
+            <Width>11.32819cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+          <Line Name="Line1">
+            <Top>5.6543cm</Top>
+            <Left>2.68655cm</Left>
+            <Height>0cm</Height>
+            <Width>19.9824cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Ürün Fiyat Tutarları</Value>
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                      <FontSize>20pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>2.99883cm</Top>
+            <Left>8.729cm</Left>
+            <Height>1.19944cm</Height>
+            <Width>7.8975cm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Tablix Name="Tablix2">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>2.4978cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.4978cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.4978cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.4978cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.4978cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.4978cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.4978cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.4978cm</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.6cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox12">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Tel Örgü</Value>
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox9</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>Red</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox14">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Beton Direk</Value>
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox11</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>Red</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox16">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Payanda Direk</Value>
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox13</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>Red</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox18">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Gerdirme Tel</Value>
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox15</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>Red</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox22">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Dikenli Tel</Value>
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox17</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>Red</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox24">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Beton ve Taş</Value>
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox19</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>Red</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox25">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Bağlama Tel</Value>
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox21</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>Red</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox26">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>İşçilik</Value>
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox23</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>Red</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.6cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="telorguTL2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Last(Fields!telorguTL.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <Format>0.00;(0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>telorguTL</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>Red</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <rd:FormatSymbolCulture>tr-TR</rd:FormatSymbolCulture>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="betondirekTL2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Last(Fields!betondirekTL.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <Format>0.00;(0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>betondirekTL</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>Red</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <rd:FormatSymbolCulture>tr-TR</rd:FormatSymbolCulture>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="payandadirekTL2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Last(Fields!payandadirekTL.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <Format>0.00;(0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>payandadirekTL</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>Red</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <rd:FormatSymbolCulture>tr-TR</rd:FormatSymbolCulture>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="gerdirmetelTL2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Last(Fields!gerdirmetelTL.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <Format>0.00;(0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>gerdirmetelTL</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>Red</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <rd:FormatSymbolCulture>tr-TR</rd:FormatSymbolCulture>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="dikenlitelTL2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Last(Fields!dikenlitelTL.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <Format>0.00;(0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>dikenlitelTL</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>Red</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <rd:FormatSymbolCulture>tr-TR</rd:FormatSymbolCulture>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="betontasTL2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Last(Fields!betontasTL.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <Format>0.00;(0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>betontasTL</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>Red</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <rd:FormatSymbolCulture>tr-TR</rd:FormatSymbolCulture>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="baglamatelTL2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Last(Fields!baglamatelTL.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <Format>0.00;(0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>baglamatelTL</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>Red</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <rd:FormatSymbolCulture>tr-TR</rd:FormatSymbolCulture>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="iscilikTL2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Last(Fields!iscilikTL.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <Format>0.00;(0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>iscilikTL</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>Red</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <rd:FormatSymbolCulture>tr-TR</rd:FormatSymbolCulture>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>DataSet1</DataSetName>
+            <Top>8.46722cm</Top>
+            <Left>2.68655cm</Left>
+            <Height>1.2cm</Height>
+            <Width>19.9824cm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+          <Chart Name="Chart10">
+            <ChartCategoryHierarchy>
+              <ChartMembers>
+                <ChartMember>
+                  <Label />
+                </ChartMember>
+              </ChartMembers>
+            </ChartCategoryHierarchy>
+            <ChartSeriesHierarchy>
+              <ChartMembers>
+                <ChartMember>
+                  <Label>telorgu TL</Label>
+                </ChartMember>
+                <ChartMember>
+                  <Label>betondirek TL</Label>
+                </ChartMember>
+                <ChartMember>
+                  <Label>payandadirek TL</Label>
+                </ChartMember>
+                <ChartMember>
+                  <Label>gerdirmetel TL</Label>
+                </ChartMember>
+                <ChartMember>
+                  <Label>dikenlitel TL</Label>
+                </ChartMember>
+                <ChartMember>
+                  <Label>betontas TL</Label>
+                </ChartMember>
+                <ChartMember>
+                  <Label>baglamatel TL</Label>
+                </ChartMember>
+              </ChartMembers>
+            </ChartSeriesHierarchy>
+            <ChartData>
+              <ChartSeriesCollection>
+                <ChartSeries Name="telorguTL">
+                  <ChartDataPoints>
+                    <ChartDataPoint>
+                      <ChartDataPointValues>
+                        <Y>=Last(Fields!telorguTL.Value)</Y>
+                      </ChartDataPointValues>
+                      <ChartDataLabel>
+                        <Style />
+                      </ChartDataLabel>
+                      <Style />
+                      <ChartMarker>
+                        <Style />
+                      </ChartMarker>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </ChartDataPoint>
+                  </ChartDataPoints>
+                  <Subtype>Stacked</Subtype>
+                  <Style />
+                  <ChartEmptyPoints>
+                    <Style />
+                    <ChartMarker>
+                      <Style />
+                    </ChartMarker>
+                    <ChartDataLabel>
+                      <Style />
+                    </ChartDataLabel>
+                  </ChartEmptyPoints>
+                  <CustomProperties>
+                    <CustomProperty>
+                      <Name>DrawingStyle</Name>
+                      <Value>Cylinder</Value>
+                    </CustomProperty>
+                  </CustomProperties>
+                  <ValueAxisName>Primary</ValueAxisName>
+                  <CategoryAxisName>Primary</CategoryAxisName>
+                  <ChartSmartLabel>
+                    <CalloutLineColor>Black</CalloutLineColor>
+                    <MinMovingDistance>0pt</MinMovingDistance>
+                  </ChartSmartLabel>
+                </ChartSeries>
+                <ChartSeries Name="betondirekTL">
+                  <ChartDataPoints>
+                    <ChartDataPoint>
+                      <ChartDataPointValues>
+                        <Y>=Last(Fields!betondirekTL.Value)</Y>
+                      </ChartDataPointValues>
+                      <ChartDataLabel>
+                        <Style />
+                      </ChartDataLabel>
+                      <Style />
+                      <ChartMarker>
+                        <Style />
+                      </ChartMarker>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </ChartDataPoint>
+                  </ChartDataPoints>
+                  <Subtype>Stacked</Subtype>
+                  <Style />
+                  <ChartEmptyPoints>
+                    <Style />
+                    <ChartMarker>
+                      <Style />
+                    </ChartMarker>
+                    <ChartDataLabel>
+                      <Style />
+                    </ChartDataLabel>
+                  </ChartEmptyPoints>
+                  <CustomProperties>
+                    <CustomProperty>
+                      <Name>DrawingStyle</Name>
+                      <Value>Cylinder</Value>
+                    </CustomProperty>
+                  </CustomProperties>
+                  <ValueAxisName>Primary</ValueAxisName>
+                  <CategoryAxisName>Primary</CategoryAxisName>
+                  <ChartSmartLabel>
+                    <CalloutLineColor>Black</CalloutLineColor>
+                    <MinMovingDistance>0pt</MinMovingDistance>
+                  </ChartSmartLabel>
+                </ChartSeries>
+                <ChartSeries Name="payandadirekTL">
+                  <ChartDataPoints>
+                    <ChartDataPoint>
+                      <ChartDataPointValues>
+                        <Y>=Last(Fields!payandadirekTL.Value)</Y>
+                      </ChartDataPointValues>
+                      <ChartDataLabel>
+                        <Style />
+                      </ChartDataLabel>
+                      <Style />
+                      <ChartMarker>
+                        <Style />
+                      </ChartMarker>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </ChartDataPoint>
+                  </ChartDataPoints>
+                  <Subtype>Stacked</Subtype>
+                  <Style />
+                  <ChartEmptyPoints>
+                    <Style />
+                    <ChartMarker>
+                      <Style />
+                    </ChartMarker>
+                    <ChartDataLabel>
+                      <Style />
+                    </ChartDataLabel>
+                  </ChartEmptyPoints>
+                  <CustomProperties>
+                    <CustomProperty>
+                      <Name>DrawingStyle</Name>
+                      <Value>Cylinder</Value>
+                    </CustomProperty>
+                  </CustomProperties>
+                  <ValueAxisName>Primary</ValueAxisName>
+                  <CategoryAxisName>Primary</CategoryAxisName>
+                  <ChartSmartLabel>
+                    <CalloutLineColor>Black</CalloutLineColor>
+                    <MinMovingDistance>0pt</MinMovingDistance>
+                  </ChartSmartLabel>
+                </ChartSeries>
+                <ChartSeries Name="gerdirmetelTL">
+                  <ChartDataPoints>
+                    <ChartDataPoint>
+                      <ChartDataPointValues>
+                        <Y>=Last(Fields!gerdirmetelTL.Value)</Y>
+                      </ChartDataPointValues>
+                      <ChartDataLabel>
+                        <Style />
+                      </ChartDataLabel>
+                      <Style />
+                      <ChartMarker>
+                        <Style />
+                      </ChartMarker>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </ChartDataPoint>
+                  </ChartDataPoints>
+                  <Subtype>Stacked</Subtype>
+                  <Style />
+                  <ChartEmptyPoints>
+                    <Style />
+                    <ChartMarker>
+                      <Style />
+                    </ChartMarker>
+                    <ChartDataLabel>
+                      <Style />
+                    </ChartDataLabel>
+                  </ChartEmptyPoints>
+                  <CustomProperties>
+                    <CustomProperty>
+                      <Name>DrawingStyle</Name>
+                      <Value>Cylinder</Value>
+                    </CustomProperty>
+                  </CustomProperties>
+                  <ValueAxisName>Primary</ValueAxisName>
+                  <CategoryAxisName>Primary</CategoryAxisName>
+                  <ChartSmartLabel>
+                    <CalloutLineColor>Black</CalloutLineColor>
+                    <MinMovingDistance>0pt</MinMovingDistance>
+                  </ChartSmartLabel>
+                </ChartSeries>
+                <ChartSeries Name="dikenlitelTL">
+                  <ChartDataPoints>
+                    <ChartDataPoint>
+                      <ChartDataPointValues>
+                        <Y>=Last(Fields!dikenlitelTL.Value)</Y>
+                      </ChartDataPointValues>
+                      <ChartDataLabel>
+                        <Style />
+                      </ChartDataLabel>
+                      <Style />
+                      <ChartMarker>
+                        <Style />
+                      </ChartMarker>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </ChartDataPoint>
+                  </ChartDataPoints>
+                  <Subtype>Stacked</Subtype>
+                  <Style />
+                  <ChartEmptyPoints>
+                    <Style />
+                    <ChartMarker>
+                      <Style />
+                    </ChartMarker>
+                    <ChartDataLabel>
+                      <Style />
+                    </ChartDataLabel>
+                  </ChartEmptyPoints>
+                  <CustomProperties>
+                    <CustomProperty>
+                      <Name>DrawingStyle</Name>
+                      <Value>Cylinder</Value>
+                    </CustomProperty>
+                  </CustomProperties>
+                  <ValueAxisName>Primary</ValueAxisName>
+                  <CategoryAxisName>Primary</CategoryAxisName>
+                  <ChartSmartLabel>
+                    <CalloutLineColor>Black</CalloutLineColor>
+                    <MinMovingDistance>0pt</MinMovingDistance>
+                  </ChartSmartLabel>
+                </ChartSeries>
+                <ChartSeries Name="betontasTL">
+                  <ChartDataPoints>
+                    <ChartDataPoint>
+                      <ChartDataPointValues>
+                        <Y>=Last(Fields!betontasTL.Value)</Y>
+                      </ChartDataPointValues>
+                      <ChartDataLabel>
+                        <Style />
+                      </ChartDataLabel>
+                      <Style />
+                      <ChartMarker>
+                        <Style />
+                      </ChartMarker>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </ChartDataPoint>
+                  </ChartDataPoints>
+                  <Subtype>Stacked</Subtype>
+                  <Style />
+                  <ChartEmptyPoints>
+                    <Style />
+                    <ChartMarker>
+                      <Style />
+                    </ChartMarker>
+                    <ChartDataLabel>
+                      <Style />
+                    </ChartDataLabel>
+                  </ChartEmptyPoints>
+                  <CustomProperties>
+                    <CustomProperty>
+                      <Name>DrawingStyle</Name>
+                      <Value>Cylinder</Value>
+                    </CustomProperty>
+                  </CustomProperties>
+                  <ValueAxisName>Primary</ValueAxisName>
+                  <CategoryAxisName>Primary</CategoryAxisName>
+                  <ChartSmartLabel>
+                    <CalloutLineColor>Black</CalloutLineColor>
+                    <MinMovingDistance>0pt</MinMovingDistance>
+                  </ChartSmartLabel>
+                </ChartSeries>
+                <ChartSeries Name="baglamatelTL">
+                  <ChartDataPoints>
+                    <ChartDataPoint>
+                      <ChartDataPointValues>
+                        <Y>=Last(Fields!baglamatelTL.Value)</Y>
+                      </ChartDataPointValues>
+                      <ChartDataLabel>
+                        <Style />
+                      </ChartDataLabel>
+                      <Style />
+                      <ChartMarker>
+                        <Style />
+                      </ChartMarker>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </ChartDataPoint>
+                  </ChartDataPoints>
+                  <Subtype>Stacked</Subtype>
+                  <Style />
+                  <ChartEmptyPoints>
+                    <Style />
+                    <ChartMarker>
+                      <Style />
+                    </ChartMarker>
+                    <ChartDataLabel>
+                      <Style />
+                    </ChartDataLabel>
+                  </ChartEmptyPoints>
+                  <CustomProperties>
+                    <CustomProperty>
+                      <Name>DrawingStyle</Name>
+                      <Value>Cylinder</Value>
+                    </CustomProperty>
+                  </CustomProperties>
+                  <ValueAxisName>Primary</ValueAxisName>
+                  <CategoryAxisName>Primary</CategoryAxisName>
+                  <ChartSmartLabel>
+                    <CalloutLineColor>Black</CalloutLineColor>
+                    <MinMovingDistance>0pt</MinMovingDistance>
+                  </ChartSmartLabel>
+                </ChartSeries>
+              </ChartSeriesCollection>
+            </ChartData>
+            <ChartAreas>
+              <ChartArea Name="Default">
+                <ChartCategoryAxes>
+                  <ChartAxis Name="Primary">
+                    <Visible>False</Visible>
+                    <Style>
+                      <Border>
+                        <Color>Gainsboro</Color>
+                        <Style>None</Style>
+                      </Border>
+                      <FontSize>8pt</FontSize>
+                      <Color>#5c5c5c</Color>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                        <Color>#5c5c5c</Color>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                  <ChartAxis Name="Secondary">
+                    <Style>
+                      <Border>
+                        <Color>Gainsboro</Color>
+                        <Style>None</Style>
+                      </Border>
+                      <FontSize>8pt</FontSize>
+                      <Color>#5c5c5c</Color>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                        <Color>#5c5c5c</Color>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Location>Opposite</Location>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                </ChartCategoryAxes>
+                <ChartValueAxes>
+                  <ChartAxis Name="Primary">
+                    <Style>
+                      <Border>
+                        <Color>Gainsboro</Color>
+                        <Style>None</Style>
+                      </Border>
+                      <FontSize>8pt</FontSize>
+                      <Color>#5c5c5c</Color>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                        <Color>#5c5c5c</Color>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                  <ChartAxis Name="Secondary">
+                    <Style>
+                      <Border>
+                        <Color>Gainsboro</Color>
+                        <Style>None</Style>
+                      </Border>
+                      <FontSize>8pt</FontSize>
+                      <Color>#5c5c5c</Color>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                        <Color>#5c5c5c</Color>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Location>Opposite</Location>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                </ChartValueAxes>
+                <ChartThreeDProperties>
+                  <Enabled>true</Enabled>
+                </ChartThreeDProperties>
+                <Style>
+                  <BackgroundColor>#00ffffff</BackgroundColor>
+                  <BackgroundGradientType>None</BackgroundGradientType>
+                </Style>
+              </ChartArea>
+            </ChartAreas>
+            <ChartLegends>
+              <ChartLegend Name="Default">
+                <Style>
+                  <BackgroundGradientType>None</BackgroundGradientType>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <Position>TopLeft</Position>
+                <Layout>Row</Layout>
+                <ChartLegendTitle>
+                  <Caption />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </ChartLegendTitle>
+                <HeaderSeparatorColor>Black</HeaderSeparatorColor>
+                <ColumnSeparatorColor>Black</ColumnSeparatorColor>
+              </ChartLegend>
+            </ChartLegends>
+            <Palette>Pacific</Palette>
+            <ChartBorderSkin>
+              <Style>
+                <BackgroundColor>Gray</BackgroundColor>
+                <BackgroundGradientType>None</BackgroundGradientType>
+                <Color>White</Color>
+              </Style>
+            </ChartBorderSkin>
+            <ChartNoDataMessage Name="NoDataMessage">
+              <Caption>No Data Available</Caption>
+              <Style>
+                <BackgroundGradientType>None</BackgroundGradientType>
+                <FontWeight>Bold</FontWeight>
+                <TextAlign>General</TextAlign>
+                <VerticalAlign>Top</VerticalAlign>
+              </Style>
+            </ChartNoDataMessage>
+            <DataSetName>DataSet1</DataSetName>
+            <Top>12.56453cm</Top>
+            <Left>0.3175cm</Left>
+            <Height>8.30729cm</Height>
+            <Width>15.95504cm</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Color>LightGrey</Color>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>White</BackgroundColor>
+              <BackgroundGradientType>None</BackgroundGradientType>
+            </Style>
+          </Chart>
+          <Chart Name="Chart11">
+            <ChartCategoryHierarchy>
+              <ChartMembers>
+                <ChartMember>
+                  <Label />
+                </ChartMember>
+              </ChartMembers>
+            </ChartCategoryHierarchy>
+            <ChartSeriesHierarchy>
+              <ChartMembers>
+                <ChartMember>
+                  <Label>iscilik TL</Label>
+                </ChartMember>
+              </ChartMembers>
+            </ChartSeriesHierarchy>
+            <ChartData>
+              <ChartSeriesCollection>
+                <ChartSeries Name="iscilikTL">
+                  <ChartDataPoints>
+                    <ChartDataPoint>
+                      <ChartDataPointValues>
+                        <Y>=Last(Fields!iscilikTL.Value)</Y>
+                      </ChartDataPointValues>
+                      <ChartDataLabel>
+                        <Style />
+                      </ChartDataLabel>
+                      <Style />
+                      <ChartMarker>
+                        <Style />
+                      </ChartMarker>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </ChartDataPoint>
+                  </ChartDataPoints>
+                  <Subtype>Stacked</Subtype>
+                  <Style />
+                  <ChartEmptyPoints>
+                    <Style />
+                    <ChartMarker>
+                      <Style />
+                    </ChartMarker>
+                    <ChartDataLabel>
+                      <Style />
+                    </ChartDataLabel>
+                  </ChartEmptyPoints>
+                  <CustomProperties>
+                    <CustomProperty>
+                      <Name>DrawingStyle</Name>
+                      <Value>Cylinder</Value>
+                    </CustomProperty>
+                  </CustomProperties>
+                  <ValueAxisName>Primary</ValueAxisName>
+                  <CategoryAxisName>Primary</CategoryAxisName>
+                  <ChartSmartLabel>
+                    <CalloutLineColor>Black</CalloutLineColor>
+                    <MinMovingDistance>0pt</MinMovingDistance>
+                  </ChartSmartLabel>
+                </ChartSeries>
+              </ChartSeriesCollection>
+            </ChartData>
+            <ChartAreas>
+              <ChartArea Name="Default">
+                <ChartCategoryAxes>
+                  <ChartAxis Name="Primary">
+                    <Visible>False</Visible>
+                    <Style>
+                      <Border>
+                        <Color>Gainsboro</Color>
+                        <Style>None</Style>
+                      </Border>
+                      <FontSize>8pt</FontSize>
+                      <Color>#5c5c5c</Color>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                        <Color>#5c5c5c</Color>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                  <ChartAxis Name="Secondary">
+                    <Style>
+                      <Border>
+                        <Color>Gainsboro</Color>
+                        <Style>None</Style>
+                      </Border>
+                      <FontSize>8pt</FontSize>
+                      <Color>#5c5c5c</Color>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                        <Color>#5c5c5c</Color>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Location>Opposite</Location>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                </ChartCategoryAxes>
+                <ChartValueAxes>
+                  <ChartAxis Name="Primary">
+                    <Style>
+                      <Border>
+                        <Color>Gainsboro</Color>
+                        <Style>None</Style>
+                      </Border>
+                      <FontSize>8pt</FontSize>
+                      <Color>#5c5c5c</Color>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                        <Color>#5c5c5c</Color>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                  <ChartAxis Name="Secondary">
+                    <Style>
+                      <Border>
+                        <Color>Gainsboro</Color>
+                        <Style>None</Style>
+                      </Border>
+                      <FontSize>8pt</FontSize>
+                      <Color>#5c5c5c</Color>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                        <Color>#5c5c5c</Color>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Location>Opposite</Location>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                </ChartValueAxes>
+                <ChartThreeDProperties>
+                  <Enabled>true</Enabled>
+                </ChartThreeDProperties>
+                <Style>
+                  <BackgroundColor>#00ffffff</BackgroundColor>
+                  <BackgroundGradientType>None</BackgroundGradientType>
+                </Style>
+              </ChartArea>
+            </ChartAreas>
+            <ChartLegends>
+              <ChartLegend Name="Default">
+                <Style>
+                  <BackgroundGradientType>None</BackgroundGradientType>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <Position>TopLeft</Position>
+                <ChartLegendTitle>
+                  <Caption />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </ChartLegendTitle>
+                <HeaderSeparatorColor>Black</HeaderSeparatorColor>
+                <ColumnSeparatorColor>Black</ColumnSeparatorColor>
+              </ChartLegend>
+            </ChartLegends>
+            <Palette>Pacific</Palette>
+            <ChartBorderSkin>
+              <Style>
+                <BackgroundColor>Gray</BackgroundColor>
+                <BackgroundGradientType>None</BackgroundGradientType>
+                <Color>White</Color>
+              </Style>
+            </ChartBorderSkin>
+            <ChartNoDataMessage Name="NoDataMessage">
+              <Caption>No Data Available</Caption>
+              <Style>
+                <BackgroundGradientType>None</BackgroundGradientType>
+                <FontWeight>Bold</FontWeight>
+                <TextAlign>General</TextAlign>
+                <VerticalAlign>Top</VerticalAlign>
+              </Style>
+            </ChartNoDataMessage>
+            <DataSetName>DataSet1</DataSetName>
+            <Top>12.56453cm</Top>
+            <Left>16.04158cm</Left>
+            <Height>8.30729cm</Height>
+            <Width>9.78234cm</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Color>LightGrey</Color>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>White</BackgroundColor>
+              <BackgroundGradientType>None</BackgroundGradientType>
+            </Style>
+          </Chart>
+          <Image Name="Image1">
+            <Source>Embedded</Source>
+            <Value>logo1</Value>
+            <Sizing>FitProportional</Sizing>
+            <Top>0.63452cm</Top>
+            <Left>10.11263cm</Left>
+            <Height>2.29375cm</Height>
+            <Width>4.65902cm</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Image>
+        </ReportItems>
+        <Height>8.62003in</Height>
+        <Style />
+      </Body>
+      <Width>10.2919in</Width>
+      <Page>
+        <PageFooter>
+          <Height>1.43028cm</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageFooter>
+        <PageHeight>29.7cm</PageHeight>
+        <PageWidth>21cm</PageWidth>
+        <LeftMargin>2cm</LeftMargin>
+        <RightMargin>2cm</RightMargin>
+        <TopMargin>2cm</TopMargin>
+        <BottomMargin>2cm</BottomMargin>
+        <ColumnSpacing>0.13cm</ColumnSpacing>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <EmbeddedImages>
+    <EmbeddedImage Name="logo">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="logo1">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAHAAAABBCAYAAAAJxiBDAAAACXBIWXMAAAsTAAALEwEAmpwYAAA6L2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS41LWMwMTQgNzkuMTUxNDgxLCAyMDEzLzAzLzEzLTEyOjA5OjE1ICAgICAgICAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgICAgICAgICAgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIgogICAgICAgICAgICB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIKICAgICAgICAgICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOmV4aWY9Imh0dHA6Ly9ucy5h
+ZG9iZS5jb20vZXhpZi8xLjAvIj4KICAgICAgICAgPHhtcDpDcmVhdG9yVG9vbD5BZG9iZSBQaG90b3Nob3AgQ0MgKFdpbmRvd3MpPC94bXA6Q3JlYXRvclRvb2w+CiAgICAgICAgIDx4bXA6Q3JlYXRlRGF0ZT4yMDE5LTA2LTA5VDAwOjQ2OjQ5KzAzOjAwPC94bXA6Q3JlYXRlRGF0ZT4KICAgICAgICAgPHhtcDpNb2RpZnlEYXRlPjIwMTktMDYtMDlUMDE6MDE6MzUrMDM6MDA8L3htcDpNb2RpZnlEYXRlPgogICAgICAgICA8eG1wOk1ldGFkYXRhRGF0ZT4yMDE5LTA2LTA5VDAxOjAxOjM1KzAzOjAwPC94bXA6TWV0YWRhdGFEYXRlPgogICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3BuZzwvZGM6Zm9ybWF0PgogICAgICAgICA8cGhvdG9zaG9wOkNvbG9yTW9kZT4zPC9waG90b3Nob3A6Q29sb3JNb2RlPgogICAgICAgICA8cGhvdG9zaG9wOlRleHRMYXllcnM+CiAgICAgICAgICAgIDxyZGY6QmFnPgogICAgICAgICAgICAgICA8cmRmOmxpIHJkZjpwYXJzZVR5cGU9IlJlc291cmNlIj4KICAgICAgICAgICAgICAgICAgPHBob3Rvc2hvcDpMYXllck5hbWU+VGVsIFNhdMSxxZ88L3Bob3Rvc2hvcDpMYXllck5hbWU+CiAgICAgICAgICAgICAgICAgIDxwaG90b3Nob3A6TGF5ZXJUZXh0PlRlbCBTYXTEscWfPC9waG90b3Nob3A6TGF5ZXJUZXh0PgogICAgICAgICAgICAgICA8L3JkZjpsaT4KICAgICAgICAgICAgICAgPHJkZjpsaSByZGY6cGFyc2VUeXBlPSJSZXNvdXJjZSI+CiAgICAgICAgICAgICAgICAgIDxwaG90b3Nob3A6
+TGF5ZXJOYW1lPlYxPC9waG90b3Nob3A6TGF5ZXJOYW1lPgogICAgICAgICAgICAgICAgICA8cGhvdG9zaG9wOkxheWVyVGV4dD5WMTwvcGhvdG9zaG9wOkxheWVyVGV4dD4KICAgICAgICAgICAgICAgPC9yZGY6bGk+CiAgICAgICAgICAgIDwvcmRmOkJhZz4KICAgICAgICAgPC9waG90b3Nob3A6VGV4dExheWVycz4KICAgICAgICAgPHhtcE1NOkluc3RhbmNlSUQ+eG1wLmlpZDplODY2YzlmYS04ZGQ5LTEyNGEtOTM5MC01YmNkMjhiN2NlYTc8L3htcE1NOkluc3RhbmNlSUQ+CiAgICAgICAgIDx4bXBNTTpEb2N1bWVudElEPnhtcC5kaWQ6ZTg2NmM5ZmEtOGRkOS0xMjRhLTkzOTAtNWJjZDI4YjdjZWE3PC94bXBNTTpEb2N1bWVudElEPgogICAgICAgICA8eG1wTU06T3JpZ2luYWxEb2N1bWVudElEPnhtcC5kaWQ6ZTg2NmM5ZmEtOGRkOS0xMjRhLTkzOTAtNWJjZDI4YjdjZWE3PC94bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ+CiAgICAgICAgIDx4bXBNTTpIaXN0b3J5PgogICAgICAgICAgICA8cmRmOlNlcT4KICAgICAgICAgICAgICAgPHJkZjpsaSByZGY6cGFyc2VUeXBlPSJSZXNvdXJjZSI+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDphY3Rpb24+Y3JlYXRlZDwvc3RFdnQ6YWN0aW9uPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6aW5zdGFuY2VJRD54bXAuaWlkOmU4NjZjOWZhLThkZDktMTI0YS05MzkwLTViY2QyOGI3Y2VhNzwvc3RFdnQ6aW5zdGFuY2VJRD4KICAgICAgICAgICAgICAgICAgPHN0RXZ0OndoZW4+
+MjAxOS0wNi0wOVQwMDo0Njo0OSswMzowMDwvc3RFdnQ6d2hlbj4KICAgICAgICAgICAgICAgICAgPHN0RXZ0OnNvZnR3YXJlQWdlbnQ+QWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKTwvc3RFdnQ6c29mdHdhcmVBZ2VudD4KICAgICAgICAgICAgICAgPC9yZGY6bGk+CiAgICAgICAgICAgIDwvcmRmOlNlcT4KICAgICAgICAgPC94bXBNTTpIaXN0b3J5PgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICAgICA8dGlmZjpYUmVzb2x1dGlvbj43MjAwMDAvMTAwMDA8L3RpZmY6WFJlc29sdXRpb24+CiAgICAgICAgIDx0aWZmOllSZXNvbHV0aW9uPjcyMDAwMC8xMDAwMDwvdGlmZjpZUmVzb2x1dGlvbj4KICAgICAgICAgPHRpZmY6UmVzb2x1dGlvblVuaXQ+MjwvdGlmZjpSZXNvbHV0aW9uVW5pdD4KICAgICAgICAgPGV4aWY6Q29sb3JTcGFjZT42NTUzNTwvZXhpZjpDb2xvclNwYWNlPgogICAgICAgICA8ZXhpZjpQaXhlbFhEaW1lbnNpb24+MTEyPC9leGlmOlBpeGVsWERpbWVuc2lvbj4KICAgICAgICAgPGV4aWY6UGl4ZWxZRGltZW5zaW9uPjY1PC9leGlmOlBpeGVsWURpbWVuc2lvbj4KICAgICAgPC9yZGY6RGVzY3JpcHRpb24+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgCjw/eHBhY2tldCBlbmQ9InciPz7ixumLAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAX
+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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>3affbe86-2a8a-4b4f-98b7-795d3e1c29f5</rd:ReportID>
+</Report>

@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TelsatDBStoreContainer" CdmEntityContainer="TelsatDBEntities1">
+    <EntitySetMapping Name="fatura">
+      <EntityTypeMapping TypeName="TelsatDB.fatura">
+        <MappingFragment StoreEntitySet="fatura">
+          <ScalarProperty Name="faturaID" ColumnName="faturaID" />
+          <ScalarProperty Name="faturaTarih" ColumnName="faturaTarih" />
+          <ScalarProperty Name="faturaTutari" ColumnName="faturaTutari" />
+          <ScalarProperty Name="urun_id" ColumnName="urun_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kullanici">
+      <EntityTypeMapping TypeName="TelsatDB.kullanici">
+        <MappingFragment StoreEntitySet="kullanici">
+          <ScalarProperty Name="kullaniciID" ColumnName="kullaniciID" />
+          <ScalarProperty Name="kullaniciAdi" ColumnName="kullaniciAdi" />
+          <ScalarProperty Name="kullaniciSifre" ColumnName="kullaniciSifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="musteri">
+      <EntityTypeMapping TypeName="TelsatDB.musteri">
+        <MappingFragment StoreEntitySet="musteri">
+          <ScalarProperty Name="musteriID" ColumnName="musteriID" />
+          <ScalarProperty Name="musteriAd" ColumnName="musteriAd" />
+          <ScalarProperty Name="musteriSoyad" ColumnName="musteriSoyad" />
+          <ScalarProperty Name="musteriTel" ColumnName="musteriTel" />
+          <ScalarProperty Name="musteriMail" ColumnName="musteriMail" />
+          <ScalarProperty Name="musteriAdres" ColumnName="musteriAdres" />
+          <ScalarProperty Name="musteriNotu" ColumnName="musteriNotu" />
+          <ScalarProperty Name="faturaID" ColumnName="faturaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="TelsatDB.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="urunMik">
+      <EntityTypeMapping TypeName="TelsatDB.urunMik">
+        <MappingFragment StoreEntitySet="urunMik">
+          <ScalarProperty Name="urunlermikID" ColumnName="urunlermikID" />
+          <ScalarProperty Name="telorguM" ColumnName="telorguM" />
+          <ScalarProperty Name="betondirekA" ColumnName="betondirekA" />
+          <ScalarProperty Name="payandadirekA" ColumnName="payandadirekA" />
+          <ScalarProperty Name="gerdirmetelM" ColumnName="gerdirmetelM" />
+          <ScalarProperty Name="dikenlitelM" ColumnName="dikenlitelM" />
+          <ScalarProperty Name="betontasM3" ColumnName="betontasM3" />
+          <ScalarProperty Name="baglamatelM" ColumnName="baglamatelM" />
+          <ScalarProperty Name="iscilikM" ColumnName="iscilikM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="urunTL">
+      <EntityTypeMapping TypeName="TelsatDB.urunTL">
+        <MappingFragment StoreEntitySet="urunTL">
+          <ScalarProperty Name="urunfiyatID" ColumnName="urunfiyatID" />
+          <ScalarProperty Name="telorguTL" ColumnName="telorguTL" />
+          <ScalarProperty Name="betondirekTL" ColumnName="betondirekTL" />
+          <ScalarProperty Name="payandadirekTL" ColumnName="payandadirekTL" />
+          <ScalarProperty Name="gerdirmetelTL" ColumnName="gerdirmetelTL" />
+          <ScalarProperty Name="dikenlitelTL" ColumnName="dikenlitelTL" />
+          <ScalarProperty Name="betontasTL" ColumnName="betontasTL" />
+          <ScalarProperty Name="baglamatelTL" ColumnName="baglamatelTL" />
+          <ScalarProperty Name="iscilikTL" ColumnName="iscilikTL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="musteri_fatura_View">
+      <EntityTypeMapping TypeName="TelsatDB.musteri_fatura_View">
+        <MappingFragment StoreEntitySet="musteri_fatura_View">
+          <ScalarProperty Name="musteriID" ColumnName="musteriID" />
+          <ScalarProperty Name="musteriAd" ColumnName="musteriAd" />
+          <ScalarProperty Name="musteriSoyad" ColumnName="musteriSoyad" />
+          <ScalarProperty Name="musteriTel" ColumnName="musteriTel" />
+          <ScalarProperty Name="musteriMail" ColumnName="musteriMail" />
+          <ScalarProperty Name="musteriAdres" ColumnName="musteriAdres" />
+          <ScalarProperty Name="musteriNotu" ColumnName="musteriNotu" />
+          <ScalarProperty Name="faturaID" ColumnName="faturaID" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="faturaTarih" ColumnName="faturaTarih" />
+          <ScalarProperty Name="faturaTutari" ColumnName="faturaTutari" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="satislar_musteri_fatura">
+      <EntityTypeMapping TypeName="TelsatDB.satislar_musteri_fatura">
+        <MappingFragment StoreEntitySet="satislar_musteri_fatura">
+          <ScalarProperty Name="musteriID" ColumnName="musteriID" />
+          <ScalarProperty Name="musteriAd" ColumnName="musteriAd" />
+          <ScalarProperty Name="musteriSoyad" ColumnName="musteriSoyad" />
+          <ScalarProperty Name="musteriTel" ColumnName="musteriTel" />
+          <ScalarProperty Name="faturaID" ColumnName="faturaID" />
+          <ScalarProperty Name="faturaTarih" ColumnName="faturaTarih" />
+          <ScalarProperty Name="faturaTutari" ColumnName="faturaTutari" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

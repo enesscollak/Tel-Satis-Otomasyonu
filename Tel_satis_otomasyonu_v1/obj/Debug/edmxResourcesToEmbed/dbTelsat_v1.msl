@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbTelSat_v1ModelStoreContainer" CdmEntityContainer="dbTelSat_v1Entities">
+    <EntitySetMapping Name="fatura">
+      <EntityTypeMapping TypeName="dbTelSat_v1Model.fatura">
+        <MappingFragment StoreEntitySet="fatura">
+          <ScalarProperty Name="faturaID" ColumnName="faturaID" />
+          <ScalarProperty Name="faturaTarih" ColumnName="faturaTarih" />
+          <ScalarProperty Name="faturaTutarı" ColumnName="faturaTutarı" />
+          <ScalarProperty Name="urun_id" ColumnName="urun_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="isListe">
+      <EntityTypeMapping TypeName="dbTelSat_v1Model.isListe">
+        <MappingFragment StoreEntitySet="isListe">
+          <ScalarProperty Name="isID" ColumnName="isID" />
+          <ScalarProperty Name="isBasitarih" ColumnName="isBasitarih" />
+          <ScalarProperty Name="isSure" ColumnName="isSure" />
+          <ScalarProperty Name="musteriID" ColumnName="musteriID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kullanici">
+      <EntityTypeMapping TypeName="dbTelSat_v1Model.kullanici">
+        <MappingFragment StoreEntitySet="kullanici">
+          <ScalarProperty Name="kullaniciID" ColumnName="kullaniciID" />
+          <ScalarProperty Name="kullaniciAdi" ColumnName="kullaniciAdi" />
+          <ScalarProperty Name="kullaniciSifre" ColumnName="kullaniciSifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="musteri">
+      <EntityTypeMapping TypeName="dbTelSat_v1Model.musteri">
+        <MappingFragment StoreEntitySet="musteri">
+          <ScalarProperty Name="musteriID" ColumnName="musteriID" />
+          <ScalarProperty Name="musteriAd" ColumnName="musteriAd" />
+          <ScalarProperty Name="musteriSoyad" ColumnName="musteriSoyad" />
+          <ScalarProperty Name="musteriTel" ColumnName="musteriTel" />
+          <ScalarProperty Name="musteriMail" ColumnName="musteriMail" />
+          <ScalarProperty Name="musteriAdres" ColumnName="musteriAdres" />
+          <ScalarProperty Name="musteriNotu" ColumnName="musteriNotu" />
+          <ScalarProperty Name="faturaID" ColumnName="faturaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="dbTelSat_v1Model.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="urunMik">
+      <EntityTypeMapping TypeName="dbTelSat_v1Model.urunMik">
+        <MappingFragment StoreEntitySet="urunMik">
+          <ScalarProperty Name="urunlermikID" ColumnName="urunlermikID" />
+          <ScalarProperty Name="telorguM" ColumnName="telorguM" />
+          <ScalarProperty Name="betondirekA" ColumnName="betondirekA" />
+          <ScalarProperty Name="payandadirekA" ColumnName="payandadirekA" />
+          <ScalarProperty Name="gerdirmetelM" ColumnName="gerdirmetelM" />
+          <ScalarProperty Name="dikenlitelM" ColumnName="dikenlitelM" />
+          <ScalarProperty Name="betontasM3" ColumnName="betontasM3" />
+          <ScalarProperty Name="baglamatelM" ColumnName="baglamatelM" />
+          <ScalarProperty Name="iscilikM" ColumnName="iscilikM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="urunTL">
+      <EntityTypeMapping TypeName="dbTelSat_v1Model.urunTL">
+        <MappingFragment StoreEntitySet="urunTL">
+          <ScalarProperty Name="urunfiyatID" ColumnName="urunfiyatID" />
+          <ScalarProperty Name="telorguTL" ColumnName="telorguTL" />
+          <ScalarProperty Name="betondirekTL" ColumnName="betondirekTL" />
+          <ScalarProperty Name="payandadirekTL" ColumnName="payandadirekTL" />
+          <ScalarProperty Name="gerdirmetelTL" ColumnName="gerdirmetelTL" />
+          <ScalarProperty Name="dikenlitelTL" ColumnName="dikenlitelTL" />
+          <ScalarProperty Name="betontasTL" ColumnName="betontasTL" />
+          <ScalarProperty Name="baglamatelTL" ColumnName="baglamatelTL" />
+          <ScalarProperty Name="iscilikTL" ColumnName="iscilikTL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="isliste_musteri_view">
+      <EntityTypeMapping TypeName="dbTelSat_v1Model.isliste_musteri_view">
+        <MappingFragment StoreEntitySet="isliste_musteri_view">
+          <ScalarProperty Name="isID" ColumnName="isID" />
+          <ScalarProperty Name="isBasitarih" ColumnName="isBasitarih" />
+          <ScalarProperty Name="isSure" ColumnName="isSure" />
+          <ScalarProperty Name="musteriID" ColumnName="musteriID" />
+          <ScalarProperty Name="musteriAd" ColumnName="musteriAd" />
+          <ScalarProperty Name="musteriSoyad" ColumnName="musteriSoyad" />
+          <ScalarProperty Name="musteriTel" ColumnName="musteriTel" />
+          <ScalarProperty Name="musteriAdres" ColumnName="musteriAdres" />
+          <ScalarProperty Name="musteriNotu" ColumnName="musteriNotu" />
+          <ScalarProperty Name="faturaID" ColumnName="faturaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="musteri_fatura_View">
+      <EntityTypeMapping TypeName="dbTelSat_v1Model.musteri_fatura_View">
+        <MappingFragment StoreEntitySet="musteri_fatura_View">
+          <ScalarProperty Name="musteriID" ColumnName="musteriID" />
+          <ScalarProperty Name="musteriAd" ColumnName="musteriAd" />
+          <ScalarProperty Name="musteriSoyad" ColumnName="musteriSoyad" />
+          <ScalarProperty Name="musteriTel" ColumnName="musteriTel" />
+          <ScalarProperty Name="musteriMail" ColumnName="musteriMail" />
+          <ScalarProperty Name="musteriAdres" ColumnName="musteriAdres" />
+          <ScalarProperty Name="musteriNotu" ColumnName="musteriNotu" />
+          <ScalarProperty Name="faturaID" ColumnName="faturaID" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="faturaTarih" ColumnName="faturaTarih" />
+          <ScalarProperty Name="faturaTutarı" ColumnName="faturaTutarı" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="satislar_musteri_fatura">
+      <EntityTypeMapping TypeName="dbTelSat_v1Model.satislar_musteri_fatura">
+        <MappingFragment StoreEntitySet="satislar_musteri_fatura">
+          <ScalarProperty Name="musteriID" ColumnName="musteriID" />
+          <ScalarProperty Name="musteriAd" ColumnName="musteriAd" />
+          <ScalarProperty Name="musteriSoyad" ColumnName="musteriSoyad" />
+          <ScalarProperty Name="musteriTel" ColumnName="musteriTel" />
+          <ScalarProperty Name="faturaID" ColumnName="faturaID" />
+          <ScalarProperty Name="faturaTarih" ColumnName="faturaTarih" />
+          <ScalarProperty Name="faturaTutarı" ColumnName="faturaTutarı" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="dbTelSat_v1Model.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="dbTelSat_v1Model.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="dbTelSat_v1Model.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="dbTelSat_v1Model.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbTelSat_v1Model.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="dbTelSat_v1Model.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbTelSat_v1Model.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="dbTelSat_v1Model.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="dbTelSat_v1Model.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="tel_satis_dbModelStoreContainer" CdmEntityContainer="tel_satis_dbEntities">
+    <EntitySetMapping Name="ajanda">
+      <EntityTypeMapping TypeName="IsTypeOf(tel_satis_dbModel.fatura)" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <MappingFragment StoreEntitySet="fatura">
+          <ScalarProperty Name="u_id" ColumnName="u_id" />
+          <ScalarProperty Name="f_tarih" ColumnName="f_tarih" />
+          <ScalarProperty Name="f_toplam_tutar" ColumnName="f_toplam_tutar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(tel_satis_dbModel.urun)" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <MappingFragment StoreEntitySet="urun">
+          <ScalarProperty Name="u_stok" ColumnName="u_stok" />
+          <ScalarProperty Name="u_toplam_fiyat" ColumnName="u_toplam_fiyat" />
+          <ScalarProperty Name="u_iscilik" ColumnName="u_iscilik" />
+          <ScalarProperty Name="u_fiyat" ColumnName="u_fiyat" />
+          <ScalarProperty Name="u_miktar" ColumnName="u_miktar" />
+          <ScalarProperty Name="u_ozellik" ColumnName="u_ozellik" />
+          <ScalarProperty Name="u_adi" ColumnName="u_adi" />
+          <ScalarProperty Name="u_kategori" ColumnName="u_kategori" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(tel_satis_dbModel.musteri)" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <MappingFragment StoreEntitySet="musteri">
+          <ScalarProperty Name="m_id" ColumnName="m_id" />
+          <ScalarProperty Name="f_id" ColumnName="f_id" />
+          <ScalarProperty Name="m_mail" ColumnName="m_mail" />
+          <ScalarProperty Name="m_notu" ColumnName="m_notu" />
+          <ScalarProperty Name="m_adres" ColumnName="m_adres" />
+          <ScalarProperty Name="m_tel" ColumnName="m_tel" />
+          <ScalarProperty Name="m_adsoy" ColumnName="m_adsoy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(tel_satis_dbModel.ajanda)">
+        <MappingFragment StoreEntitySet="ajanda">
+          <ScalarProperty Name="is_id" ColumnName="is_id" />
+          <ScalarProperty Name="m_id" ColumnName="m_id" />
+          <ScalarProperty Name="is_suresi" ColumnName="is_suresi" />
+          <ScalarProperty Name="is_baslama_tarih" ColumnName="is_baslama_tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(tel_satis_dbModel.kategori)">
+        <MappingFragment StoreEntitySet="kategori">
+          <ScalarProperty Name="k_ad" ColumnName="k_ad" />
+          <ScalarProperty Name="k_id" ColumnName="k_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kullanici">
+      <EntityTypeMapping TypeName="tel_satis_dbModel.kullanici">
+        <MappingFragment StoreEntitySet="kullanici">
+          <ScalarProperty Name="k_id" ColumnName="k_id" />
+          <ScalarProperty Name="k_adi" ColumnName="k_adi" />
+          <ScalarProperty Name="k_sifre" ColumnName="k_sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbTelSat_v1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="fatura">
+    <Key>
+      <PropertyRef Name="faturaID" />
+    </Key>
+    <Property Name="faturaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="faturaTarih" Type="date" />
+    <Property Name="faturaTutarı" Type="int" />
+    <Property Name="urun_id" Type="int" />
+  </EntityType>
+  <EntityType Name="isListe">
+    <Key>
+      <PropertyRef Name="isID" />
+    </Key>
+    <Property Name="isID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="isBasitarih" Type="date" />
+    <Property Name="isSure" Type="nchar" MaxLength="10" />
+    <Property Name="musteriID" Type="int" />
+  </EntityType>
+  <EntityType Name="kullanici">
+    <Key>
+      <PropertyRef Name="kullaniciID" />
+    </Key>
+    <Property Name="kullaniciID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kullaniciAdi" Type="nvarchar" MaxLength="20" />
+    <Property Name="kullaniciSifre" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="musteri">
+    <Key>
+      <PropertyRef Name="musteriID" />
+    </Key>
+    <Property Name="musteriID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="musteriAd" Type="nvarchar" MaxLength="20" />
+    <Property Name="musteriSoyad" Type="nvarchar" MaxLength="20" />
+    <Property Name="musteriTel" Type="nvarchar" MaxLength="15" />
+    <Property Name="musteriMail" Type="nvarchar" MaxLength="20" />
+    <Property Name="musteriAdres" Type="nvarchar" MaxLength="50" />
+    <Property Name="musteriNotu" Type="nvarchar" MaxLength="50" />
+    <Property Name="faturaID" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="urunMik">
+    <Key>
+      <PropertyRef Name="urunlermikID" />
+    </Key>
+    <Property Name="urunlermikID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="telorguM" Type="int" />
+    <Property Name="betondirekA" Type="int" />
+    <Property Name="payandadirekA" Type="int" />
+    <Property Name="gerdirmetelM" Type="int" />
+    <Property Name="dikenlitelM" Type="int" />
+    <Property Name="betontasM3" Type="int" />
+    <Property Name="baglamatelM" Type="int" />
+    <Property Name="iscilikM" Type="int" />
+  </EntityType>
+  <EntityType Name="urunTL">
+    <Key>
+      <PropertyRef Name="urunfiyatID" />
+    </Key>
+    <Property Name="urunfiyatID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="telorguTL" Type="int" />
+    <Property Name="betondirekTL" Type="int" />
+    <Property Name="payandadirekTL" Type="int" />
+    <Property Name="gerdirmetelTL" Type="int" />
+    <Property Name="dikenlitelTL" Type="int" />
+    <Property Name="betontasTL" Type="int" />
+    <Property Name="baglamatelTL" Type="int" />
+    <Property Name="iscilikTL" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbTelSat_v1.dbo.isliste_musteri_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="isliste_musteri_view">
+    <Key>
+      <PropertyRef Name="isID" />
+    </Key>
+    <Property Name="isID" Type="int" Nullable="false" />
+    <Property Name="isBasitarih" Type="date" />
+    <Property Name="isSure" Type="nchar" MaxLength="10" />
+    <Property Name="musteriID" Type="int" />
+    <Property Name="musteriAd" Type="nvarchar" MaxLength="20" />
+    <Property Name="musteriSoyad" Type="nvarchar" MaxLength="20" />
+    <Property Name="musteriTel" Type="nvarchar" MaxLength="15" />
+    <Property Name="musteriAdres" Type="nvarchar" MaxLength="50" />
+    <Property Name="musteriNotu" Type="nvarchar" MaxLength="50" />
+    <Property Name="faturaID" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbTelSat_v1.dbo.musteri_fatura_View' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="musteri_fatura_View">
+    <Key>
+      <PropertyRef Name="musteriID" />
+      <PropertyRef Name="Expr1" />
+    </Key>
+    <Property Name="musteriID" Type="int" Nullable="false" />
+    <Property Name="musteriAd" Type="nvarchar" MaxLength="20" />
+    <Property Name="musteriSoyad" Type="nvarchar" MaxLength="20" />
+    <Property Name="musteriTel" Type="nvarchar" MaxLength="15" />
+    <Property Name="musteriMail" Type="nvarchar" MaxLength="20" />
+    <Property Name="musteriAdres" Type="nvarchar" MaxLength="50" />
+    <Property Name="musteriNotu" Type="nvarchar" MaxLength="50" />
+    <Property Name="faturaID" Type="int" />
+    <Property Name="Expr1" Type="int" Nullable="false" />
+    <Property Name="faturaTarih" Type="date" />
+    <Property Name="faturaTutarı" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbTelSat_v1.dbo.satislar_musteri_fatura' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="satislar_musteri_fatura">
+    <Key>
+      <PropertyRef Name="musteriID" />
+      <PropertyRef Name="faturaID" />
+    </Key>
+    <Property Name="musteriID" Type="int" Nullable="false" />
+    <Property Name="musteriAd" Type="nvarchar" MaxLength="20" />
+    <Property Name="musteriSoyad" Type="nvarchar" MaxLength="20" />
+    <Property Name="musteriTel" Type="nvarchar" MaxLength="15" />
+    <Property Name="faturaID" Type="int" Nullable="false" />
+    <Property Name="faturaTarih" Type="date" />
+    <Property Name="faturaTutarı" Type="int" />
+  </EntityType>
+  <Association Name="FK_fatura_urunTL">
+    <End Role="urunTL" Type="Self.urunTL" Multiplicity="0..1" />
+    <End Role="fatura" Type="Self.fatura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="urunTL">
+        <PropertyRef Name="urunfiyatID" />
+      </Principal>
+      <Dependent Role="fatura">
+        <PropertyRef Name="urun_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_isListe_musteri">
+    <End Role="musteri" Type="Self.musteri" Multiplicity="0..1" />
+    <End Role="isListe" Type="Self.isListe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="musteri">
+        <PropertyRef Name="musteriID" />
+      </Principal>
+      <Dependent Role="isListe">
+        <PropertyRef Name="musteriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_musteri_fatura">
+    <End Role="fatura" Type="Self.fatura" Multiplicity="0..1" />
+    <End Role="musteri" Type="Self.musteri" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="fatura">
+        <PropertyRef Name="faturaID" />
+      </Principal>
+      <Dependent Role="musteri">
+        <PropertyRef Name="faturaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="dbTelSat_v1ModelStoreContainer">
+    <EntitySet Name="fatura" EntityType="Self.fatura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="isListe" EntityType="Self.isListe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="kullanici" EntityType="Self.kullanici" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="musteri" EntityType="Self.musteri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="urunMik" EntityType="Self.urunMik" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="urunTL" EntityType="Self.urunTL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="isliste_musteri_view" EntityType="Self.isliste_musteri_view" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [isliste_musteri_view].[isID] AS [isID], 
+    [isliste_musteri_view].[isBasitarih] AS [isBasitarih], 
+    [isliste_musteri_view].[isSure] AS [isSure], 
+    [isliste_musteri_view].[musteriID] AS [musteriID], 
+    [isliste_musteri_view].[musteriAd] AS [musteriAd], 
+    [isliste_musteri_view].[musteriSoyad] AS [musteriSoyad], 
+    [isliste_musteri_view].[musteriTel] AS [musteriTel], 
+    [isliste_musteri_view].[musteriAdres] AS [musteriAdres], 
+    [isliste_musteri_view].[musteriNotu] AS [musteriNotu], 
+    [isliste_musteri_view].[faturaID] AS [faturaID]
+    FROM [dbo].[isliste_musteri_view] AS [isliste_musteri_view]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="musteri_fatura_View" EntityType="Self.musteri_fatura_View" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [musteri_fatura_View].[musteriID] AS [musteriID], 
+    [musteri_fatura_View].[musteriAd] AS [musteriAd], 
+    [musteri_fatura_View].[musteriSoyad] AS [musteriSoyad], 
+    [musteri_fatura_View].[musteriTel] AS [musteriTel], 
+    [musteri_fatura_View].[musteriMail] AS [musteriMail], 
+    [musteri_fatura_View].[musteriAdres] AS [musteriAdres], 
+    [musteri_fatura_View].[musteriNotu] AS [musteriNotu], 
+    [musteri_fatura_View].[faturaID] AS [faturaID], 
+    [musteri_fatura_View].[Expr1] AS [Expr1], 
+    [musteri_fatura_View].[faturaTarih] AS [faturaTarih], 
+    [musteri_fatura_View].[faturaTutarı] AS [faturaTutarı]
+    FROM [dbo].[musteri_fatura_View] AS [musteri_fatura_View]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="satislar_musteri_fatura" EntityType="Self.satislar_musteri_fatura" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [satislar_musteri_fatura].[musteriID] AS [musteriID], 
+    [satislar_musteri_fatura].[musteriAd] AS [musteriAd], 
+    [satislar_musteri_fatura].[musteriSoyad] AS [musteriSoyad], 
+    [satislar_musteri_fatura].[musteriTel] AS [musteriTel], 
+    [satislar_musteri_fatura].[faturaID] AS [faturaID], 
+    [satislar_musteri_fatura].[faturaTarih] AS [faturaTarih], 
+    [satislar_musteri_fatura].[faturaTutarı] AS [faturaTutarı]
+    FROM [dbo].[satislar_musteri_fatura] AS [satislar_musteri_fatura]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_fatura_urunTL" Association="Self.FK_fatura_urunTL">
+      <End Role="urunTL" EntitySet="urunTL" />
+      <End Role="fatura" EntitySet="fatura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_isListe_musteri" Association="Self.FK_isListe_musteri">
+      <End Role="musteri" EntitySet="musteri" />
+      <End Role="isListe" EntitySet="isListe" />
+    </AssociationSet>
+    <AssociationSet Name="FK_musteri_fatura" Association="Self.FK_musteri_fatura">
+      <End Role="fatura" EntitySet="fatura" />
+      <End Role="musteri" EntitySet="musteri" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

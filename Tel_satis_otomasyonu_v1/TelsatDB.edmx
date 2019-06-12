@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TelsatDB.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="fatura">
+          <Key>
+            <PropertyRef Name="faturaID" />
+          </Key>
+          <Property Name="faturaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="faturaTarih" Type="date" />
+          <Property Name="faturaTutari" Type="int" />
+          <Property Name="urun_id" Type="int" />
+        </EntityType>
+        <EntityType Name="kullanici">
+          <Key>
+            <PropertyRef Name="kullaniciID" />
+          </Key>
+          <Property Name="kullaniciID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="kullaniciAdi" Type="nvarchar" MaxLength="50" />
+          <Property Name="kullaniciSifre" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="musteri">
+          <Key>
+            <PropertyRef Name="musteriID" />
+          </Key>
+          <Property Name="musteriID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="musteriAd" Type="nvarchar" MaxLength="50" />
+          <Property Name="musteriSoyad" Type="nvarchar" MaxLength="50" />
+          <Property Name="musteriTel" Type="nvarchar" MaxLength="50" />
+          <Property Name="musteriMail" Type="nvarchar" MaxLength="50" />
+          <Property Name="musteriAdres" Type="nvarchar" MaxLength="50" />
+          <Property Name="musteriNotu" Type="nvarchar" MaxLength="50" />
+          <Property Name="faturaID" Type="int" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="urunMik">
+          <Key>
+            <PropertyRef Name="urunlermikID" />
+          </Key>
+          <Property Name="urunlermikID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="telorguM" Type="int" />
+          <Property Name="betondirekA" Type="int" />
+          <Property Name="payandadirekA" Type="int" />
+          <Property Name="gerdirmetelM" Type="int" />
+          <Property Name="dikenlitelM" Type="int" />
+          <Property Name="betontasM3" Type="int" />
+          <Property Name="baglamatelM" Type="int" />
+          <Property Name="iscilikM" Type="int" />
+        </EntityType>
+        <EntityType Name="urunTL">
+          <Key>
+            <PropertyRef Name="urunfiyatID" />
+          </Key>
+          <Property Name="urunfiyatID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="telorguTL" Type="int" />
+          <Property Name="betondirekTL" Type="int" />
+          <Property Name="payandadirekTL" Type="int" />
+          <Property Name="gerdirmetelTL" Type="int" />
+          <Property Name="dikenlitelTL" Type="int" />
+          <Property Name="betontasTL" Type="int" />
+          <Property Name="baglamatelTL" Type="int" />
+          <Property Name="iscilikTL" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'C:\USERS\ENES\DESKTOP\TEL_SATIS_OTOMASYONU_V1\TEL_SATIS_OTOMASYONU_V1\TELSATDB.MDF.dbo.musteri_fatura_View' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="musteri_fatura_View">
+          <Key>
+            <PropertyRef Name="musteriID" />
+            <PropertyRef Name="Expr1" />
+          </Key>
+          <Property Name="musteriID" Type="int" Nullable="false" />
+          <Property Name="musteriAd" Type="nvarchar" MaxLength="50" />
+          <Property Name="musteriSoyad" Type="nvarchar" MaxLength="50" />
+          <Property Name="musteriTel" Type="nvarchar" MaxLength="50" />
+          <Property Name="musteriMail" Type="nvarchar" MaxLength="50" />
+          <Property Name="musteriAdres" Type="nvarchar" MaxLength="50" />
+          <Property Name="musteriNotu" Type="nvarchar" MaxLength="50" />
+          <Property Name="faturaID" Type="int" />
+          <Property Name="Expr1" Type="int" Nullable="false" />
+          <Property Name="faturaTarih" Type="date" />
+          <Property Name="faturaTutari" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'C:\USERS\ENES\DESKTOP\TEL_SATIS_OTOMASYONU_V1\TEL_SATIS_OTOMASYONU_V1\TELSATDB.MDF.dbo.satislar_musteri_fatura' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="satislar_musteri_fatura">
+          <Key>
+            <PropertyRef Name="musteriID" />
+            <PropertyRef Name="faturaID" />
+          </Key>
+          <Property Name="musteriID" Type="int" Nullable="false" />
+          <Property Name="musteriAd" Type="nvarchar" MaxLength="50" />
+          <Property Name="musteriSoyad" Type="nvarchar" MaxLength="50" />
+          <Property Name="musteriTel" Type="nvarchar" MaxLength="50" />
+          <Property Name="faturaID" Type="int" Nullable="false" />
+          <Property Name="faturaTarih" Type="date" />
+          <Property Name="faturaTutari" Type="int" />
+        </EntityType>
+        <Association Name="FK_fatura_urunTL">
+          <End Role="urunTL" Type="Self.urunTL" Multiplicity="0..1" />
+          <End Role="fatura" Type="Self.fatura" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="urunTL">
+              <PropertyRef Name="urunfiyatID" />
+            </Principal>
+            <Dependent Role="fatura">
+              <PropertyRef Name="urun_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_musteri_fatura">
+          <End Role="fatura" Type="Self.fatura" Multiplicity="0..1" />
+          <End Role="musteri" Type="Self.musteri" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fatura">
+              <PropertyRef Name="faturaID" />
+            </Principal>
+            <Dependent Role="musteri">
+              <PropertyRef Name="faturaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TelsatDBStoreContainer">
+          <EntitySet Name="fatura" EntityType="Self.fatura" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="kullanici" EntityType="Self.kullanici" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="musteri" EntityType="Self.musteri" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="urunMik" EntityType="Self.urunMik" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="urunTL" EntityType="Self.urunTL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="musteri_fatura_View" EntityType="Self.musteri_fatura_View" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [musteri_fatura_View].[musteriID] AS [musteriID], 
+    [musteri_fatura_View].[musteriAd] AS [musteriAd], 
+    [musteri_fatura_View].[musteriSoyad] AS [musteriSoyad], 
+    [musteri_fatura_View].[musteriTel] AS [musteriTel], 
+    [musteri_fatura_View].[musteriMail] AS [musteriMail], 
+    [musteri_fatura_View].[musteriAdres] AS [musteriAdres], 
+    [musteri_fatura_View].[musteriNotu] AS [musteriNotu], 
+    [musteri_fatura_View].[faturaID] AS [faturaID], 
+    [musteri_fatura_View].[Expr1] AS [Expr1], 
+    [musteri_fatura_View].[faturaTarih] AS [faturaTarih], 
+    [musteri_fatura_View].[faturaTutari] AS [faturaTutari]
+    FROM [dbo].[musteri_fatura_View] AS [musteri_fatura_View]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="satislar_musteri_fatura" EntityType="Self.satislar_musteri_fatura" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [satislar_musteri_fatura].[musteriID] AS [musteriID], 
+    [satislar_musteri_fatura].[musteriAd] AS [musteriAd], 
+    [satislar_musteri_fatura].[musteriSoyad] AS [musteriSoyad], 
+    [satislar_musteri_fatura].[musteriTel] AS [musteriTel], 
+    [satislar_musteri_fatura].[faturaID] AS [faturaID], 
+    [satislar_musteri_fatura].[faturaTarih] AS [faturaTarih], 
+    [satislar_musteri_fatura].[faturaTutari] AS [faturaTutari]
+    FROM [dbo].[satislar_musteri_fatura] AS [satislar_musteri_fatura]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_fatura_urunTL" Association="Self.FK_fatura_urunTL">
+            <End Role="urunTL" EntitySet="urunTL" />
+            <End Role="fatura" EntitySet="fatura" />
+          </AssociationSet>
+          <AssociationSet Name="FK_musteri_fatura" Association="Self.FK_musteri_fatura">
+            <End Role="fatura" EntitySet="fatura" />
+            <End Role="musteri" EntitySet="musteri" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TelsatDB" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="fatura">
+          <Key>
+            <PropertyRef Name="faturaID" />
+          </Key>
+          <Property Name="faturaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="faturaTarih" Type="DateTime" Precision="0" />
+          <Property Name="faturaTutari" Type="Int32" />
+          <Property Name="urun_id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="kullanici">
+          <Key>
+            <PropertyRef Name="kullaniciID" />
+          </Key>
+          <Property Name="kullaniciID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kullaniciSifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="musteri">
+          <Key>
+            <PropertyRef Name="musteriID" />
+          </Key>
+          <Property Name="musteriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="musteriAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="musteriSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="musteriTel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="musteriMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="musteriAdres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="musteriNotu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="faturaID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="urunMik">
+          <Key>
+            <PropertyRef Name="urunlermikID" />
+          </Key>
+          <Property Name="urunlermikID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="telorguM" Type="Int32" />
+          <Property Name="betondirekA" Type="Int32" />
+          <Property Name="payandadirekA" Type="Int32" />
+          <Property Name="gerdirmetelM" Type="Int32" />
+          <Property Name="dikenlitelM" Type="Int32" />
+          <Property Name="betontasM3" Type="Int32" />
+          <Property Name="baglamatelM" Type="Int32" />
+          <Property Name="iscilikM" Type="Int32" />
+        </EntityType>
+        <EntityType Name="urunTL">
+          <Key>
+            <PropertyRef Name="urunfiyatID" />
+          </Key>
+          <Property Name="urunfiyatID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="telorguTL" Type="Int32" />
+          <Property Name="betondirekTL" Type="Int32" />
+          <Property Name="payandadirekTL" Type="Int32" />
+          <Property Name="gerdirmetelTL" Type="Int32" />
+          <Property Name="dikenlitelTL" Type="Int32" />
+          <Property Name="betontasTL" Type="Int32" />
+          <Property Name="baglamatelTL" Type="Int32" />
+          <Property Name="iscilikTL" Type="Int32" />
+          <NavigationProperty Name="fatura" Relationship="Self.FK_fatura_urunTL" FromRole="urunTL" ToRole="fatura" />
+        </EntityType>
+        <EntityType Name="musteri_fatura_View">
+          <Key>
+            <PropertyRef Name="musteriID" />
+            <PropertyRef Name="Expr1" />
+          </Key>
+          <Property Name="musteriID" Type="Int32" Nullable="false" />
+          <Property Name="musteriAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="musteriSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="musteriTel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="musteriMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="musteriAdres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="musteriNotu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="faturaID" Type="Int32" />
+          <Property Name="Expr1" Type="Int32" Nullable="false" />
+          <Property Name="faturaTarih" Type="DateTime" Precision="0" />
+          <Property Name="faturaTutari" Type="Int32" />
+        </EntityType>
+        <EntityType Name="satislar_musteri_fatura">
+          <Key>
+            <PropertyRef Name="musteriID" />
+            <PropertyRef Name="faturaID" />
+          </Key>
+          <Property Name="musteriID" Type="Int32" Nullable="false" />
+          <Property Name="musteriAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="musteriSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="musteriTel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="faturaID" Type="Int32" Nullable="false" />
+          <Property Name="faturaTarih" Type="DateTime" Precision="0" />
+          <Property Name="faturaTutari" Type="Int32" />
+        </EntityType>
+        <Association Name="FK_fatura_urunTL">
+          <End Role="urunTL" Type="Self.urunTL" Multiplicity="0..1" />
+          <End Role="fatura" Type="Self.fatura" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="urunTL">
+              <PropertyRef Name="urunfiyatID" />
+            </Principal>
+            <Dependent Role="fatura">
+              <PropertyRef Name="urun_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_musteri_fatura">
+          <End Role="fatura" Type="Self.fatura" Multiplicity="0..1" />
+          <End Role="musteri" Type="Self.musteri" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fatura">
+              <PropertyRef Name="faturaID" />
+            </Principal>
+            <Dependent Role="musteri">
+              <PropertyRef Name="faturaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TelsatDBEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="fatura" EntityType="Self.fatura" />
+          <EntitySet Name="kullanici" EntityType="Self.kullanici" />
+          <EntitySet Name="musteri" EntityType="Self.musteri" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="urunMik" EntityType="Self.urunMik" />
+          <EntitySet Name="urunTL" EntityType="Self.urunTL" />
+          <EntitySet Name="musteri_fatura_View" EntityType="Self.musteri_fatura_View" />
+          <EntitySet Name="satislar_musteri_fatura" EntityType="Self.satislar_musteri_fatura" />
+          <AssociationSet Name="FK_fatura_urunTL" Association="Self.FK_fatura_urunTL">
+            <End Role="urunTL" EntitySet="urunTL" />
+            <End Role="fatura" EntitySet="fatura" />
+          </AssociationSet>
+          <AssociationSet Name="FK_musteri_fatura" Association="Self.FK_musteri_fatura">
+            <End Role="fatura" EntitySet="fatura" />
+            <End Role="musteri" EntitySet="musteri" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TelsatDBStoreContainer" CdmEntityContainer="TelsatDBEntities1">
+          <EntitySetMapping Name="fatura">
+            <EntityTypeMapping TypeName="TelsatDB.fatura">
+              <MappingFragment StoreEntitySet="fatura">
+                <ScalarProperty Name="faturaID" ColumnName="faturaID" />
+                <ScalarProperty Name="faturaTarih" ColumnName="faturaTarih" />
+                <ScalarProperty Name="faturaTutari" ColumnName="faturaTutari" />
+                <ScalarProperty Name="urun_id" ColumnName="urun_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="kullanici">
+            <EntityTypeMapping TypeName="TelsatDB.kullanici">
+              <MappingFragment StoreEntitySet="kullanici">
+                <ScalarProperty Name="kullaniciID" ColumnName="kullaniciID" />
+                <ScalarProperty Name="kullaniciAdi" ColumnName="kullaniciAdi" />
+                <ScalarProperty Name="kullaniciSifre" ColumnName="kullaniciSifre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="musteri">
+            <EntityTypeMapping TypeName="TelsatDB.musteri">
+              <MappingFragment StoreEntitySet="musteri">
+                <ScalarProperty Name="musteriID" ColumnName="musteriID" />
+                <ScalarProperty Name="musteriAd" ColumnName="musteriAd" />
+                <ScalarProperty Name="musteriSoyad" ColumnName="musteriSoyad" />
+                <ScalarProperty Name="musteriTel" ColumnName="musteriTel" />
+                <ScalarProperty Name="musteriMail" ColumnName="musteriMail" />
+                <ScalarProperty Name="musteriAdres" ColumnName="musteriAdres" />
+                <ScalarProperty Name="musteriNotu" ColumnName="musteriNotu" />
+                <ScalarProperty Name="faturaID" ColumnName="faturaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="TelsatDB.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="urunMik">
+            <EntityTypeMapping TypeName="TelsatDB.urunMik">
+              <MappingFragment StoreEntitySet="urunMik">
+                <ScalarProperty Name="urunlermikID" ColumnName="urunlermikID" />
+                <ScalarProperty Name="telorguM" ColumnName="telorguM" />
+                <ScalarProperty Name="betondirekA" ColumnName="betondirekA" />
+                <ScalarProperty Name="payandadirekA" ColumnName="payandadirekA" />
+                <ScalarProperty Name="gerdirmetelM" ColumnName="gerdirmetelM" />
+                <ScalarProperty Name="dikenlitelM" ColumnName="dikenlitelM" />
+                <ScalarProperty Name="betontasM3" ColumnName="betontasM3" />
+                <ScalarProperty Name="baglamatelM" ColumnName="baglamatelM" />
+                <ScalarProperty Name="iscilikM" ColumnName="iscilikM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="urunTL">
+            <EntityTypeMapping TypeName="TelsatDB.urunTL">
+              <MappingFragment StoreEntitySet="urunTL">
+                <ScalarProperty Name="urunfiyatID" ColumnName="urunfiyatID" />
+                <ScalarProperty Name="telorguTL" ColumnName="telorguTL" />
+                <ScalarProperty Name="betondirekTL" ColumnName="betondirekTL" />
+                <ScalarProperty Name="payandadirekTL" ColumnName="payandadirekTL" />
+                <ScalarProperty Name="gerdirmetelTL" ColumnName="gerdirmetelTL" />
+                <ScalarProperty Name="dikenlitelTL" ColumnName="dikenlitelTL" />
+                <ScalarProperty Name="betontasTL" ColumnName="betontasTL" />
+                <ScalarProperty Name="baglamatelTL" ColumnName="baglamatelTL" />
+                <ScalarProperty Name="iscilikTL" ColumnName="iscilikTL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="musteri_fatura_View">
+            <EntityTypeMapping TypeName="TelsatDB.musteri_fatura_View">
+              <MappingFragment StoreEntitySet="musteri_fatura_View">
+                <ScalarProperty Name="musteriID" ColumnName="musteriID" />
+                <ScalarProperty Name="musteriAd" ColumnName="musteriAd" />
+                <ScalarProperty Name="musteriSoyad" ColumnName="musteriSoyad" />
+                <ScalarProperty Name="musteriTel" ColumnName="musteriTel" />
+                <ScalarProperty Name="musteriMail" ColumnName="musteriMail" />
+                <ScalarProperty Name="musteriAdres" ColumnName="musteriAdres" />
+                <ScalarProperty Name="musteriNotu" ColumnName="musteriNotu" />
+                <ScalarProperty Name="faturaID" ColumnName="faturaID" />
+                <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+                <ScalarProperty Name="faturaTarih" ColumnName="faturaTarih" />
+                <ScalarProperty Name="faturaTutari" ColumnName="faturaTutari" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="satislar_musteri_fatura">
+            <EntityTypeMapping TypeName="TelsatDB.satislar_musteri_fatura">
+              <MappingFragment StoreEntitySet="satislar_musteri_fatura">
+                <ScalarProperty Name="musteriID" ColumnName="musteriID" />
+                <ScalarProperty Name="musteriAd" ColumnName="musteriAd" />
+                <ScalarProperty Name="musteriSoyad" ColumnName="musteriSoyad" />
+                <ScalarProperty Name="musteriTel" ColumnName="musteriTel" />
+                <ScalarProperty Name="faturaID" ColumnName="faturaID" />
+                <ScalarProperty Name="faturaTarih" ColumnName="faturaTarih" />
+                <ScalarProperty Name="faturaTutari" ColumnName="faturaTutari" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

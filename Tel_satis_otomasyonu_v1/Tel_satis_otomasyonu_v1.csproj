@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C182F18-4320-438E-94A4-F5B8CBC15C10}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Tel_satis_otomasyonu_v1</RootNamespace>
+    <AssemblyName>Tel_satis_otomasyonu_v1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Tel_satis_otomasyonu_v1.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControlClass.cs" />
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fatura.cs">
+      <DependentUpon>TelsatDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBarbed_wire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBarbed_wire.Designer.cs">
+      <DependentUpon>frmBarbed_wire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBinding_wire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBinding_wire.Designer.cs">
+      <DependentUpon>frmBinding_wire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConcrete_post.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConcrete_post.Designer.cs">
+      <DependentUpon>frmConcrete_post.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConcrete_stone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConcrete_stone.Designer.cs">
+      <DependentUpon>frmConcrete_stone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSales.Designer.cs">
+      <DependentUpon>frmSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStart.Designer.cs">
+      <DependentUpon>frmStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStretching_wire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStretching_wire.Designer.cs">
+      <DependentUpon>frmStretching_wire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStrut_post.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStrut_post.Designer.cs">
+      <DependentUpon>frmStrut_post.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWire_netting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWire_netting.Designer.cs">
+      <DependentUpon>frmWire_netting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWorker.Designer.cs">
+      <DependentUpon>frmWorker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kullanici.cs">
+      <DependentUpon>TelsatDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="musteri.cs">
+      <DependentUpon>TelsatDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="musteri_fatura_View.cs">
+      <DependentUpon>TelsatDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="satislar_musteri_fatura.cs">
+      <DependentUpon>TelsatDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>TelsatDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TelsatDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TelsatDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TelsatDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TelsatDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TelsatDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TelsatDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ucCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucCustomer.Designer.cs">
+      <DependentUpon>ucCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDashboard.Designer.cs">
+      <DependentUpon>ucDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucPictureview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPictureview.Designer.cs">
+      <DependentUpon>ucPictureview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucUsers.Designer.cs">
+      <DependentUpon>ucUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="urunMik.cs">
+      <DependentUpon>TelsatDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="urunTL.cs">
+      <DependentUpon>TelsatDB.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBarbed_wire.resx">
+      <DependentUpon>frmBarbed_wire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBinding_wire.resx">
+      <DependentUpon>frmBinding_wire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConcrete_post.resx">
+      <DependentUpon>frmConcrete_post.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConcrete_stone.resx">
+      <DependentUpon>frmConcrete_stone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSales.resx">
+      <DependentUpon>frmSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStart.resx">
+      <DependentUpon>frmStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStretching_wire.resx">
+      <DependentUpon>frmStretching_wire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStrut_post.resx">
+      <DependentUpon>frmStrut_post.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWire_netting.resx">
+      <DependentUpon>frmWire_netting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWorker.resx">
+      <DependentUpon>frmWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="ucCustomer.resx">
+      <DependentUpon>ucCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDashboard.resx">
+      <DependentUpon>ucDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPictureview.resx">
+      <DependentUpon>ucPictureview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucUsers.resx">
+      <DependentUpon>ucUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\kullanici.datasource" />
+    <None Include="Properties\DataSources\musteri.datasource" />
+    <None Include="Properties\DataSources\musteri_fatura_View.datasource" />
+    <None Include="Properties\DataSources\satislar_musteri_fatura.datasource" />
+    <None Include="Properties\DataSources\urunMik.datasource" />
+    <None Include="Properties\DataSources\urunTL.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="TelsatDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TelsatDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="TelsatDB.edmx.diagram">
+      <DependentUpon>TelsatDB.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wire_netting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Concrete_post.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Strut_post.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Strut_post2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Strut_post3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stretching_wire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barbed_wire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barbed_wire1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Concrete_stone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Binding_wire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_barbed__safety__wire__security_2542099.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barbed_wire_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Concrete_stone_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wire_netting1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Strut_post1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wire_netting2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TelsatDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TelsatDB.edmx</DependentUpon>
+      <LastGenOutput>TelsatDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="TelsatDB.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TelsatDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TelsatDB.edmx</DependentUpon>
+      <LastGenOutput>TelsatDB.cs</LastGenOutput>
+    </Content>
+    <Content Include="TelsatDB_log.ldf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <DependentUpon>TelsatDB.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
